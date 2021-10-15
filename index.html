@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js" integrity="sha256-qXBd/EfAdjOA2FGrGAG+b3YBn2tn5A6bhz+LSgYD96k=" crossorigin="anonymous"></script>
+</head>
+<body>
+  <script>
+    (async () => {
+      const { hello, default: defaultExportedFn } = await import('/main.js');
+      hello();
+      defaultExportedFn();
+    })();
+  </script>
+</body>
+</html>
